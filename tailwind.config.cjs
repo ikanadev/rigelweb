@@ -8,6 +8,7 @@ module.exports = {
         'primarydark': '#086483',
         'primarylight': '#05A2C2',
         'primary': '#0894B3',
+        'dark': '#151718',
       },
     },
   },
