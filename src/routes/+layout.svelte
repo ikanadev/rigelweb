@@ -46,7 +46,7 @@
 			<h1 class="font-bold text-lg">Rigel</h1>
 		</div>
 		<div class="flex gap-8 items-center mr-10">
-			<a class="hover:underline" href={base}>Inicio</a>
+			<a class="hover:underline" href="{base}/#home">Inicio</a>
 			<a href="{base}/#features"> Características </a>
 			<a href="{base}/#screenshots">Capturas</a>
 			<a href="{base}/#pricing">Precio</a>

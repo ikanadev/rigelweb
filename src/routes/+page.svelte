@@ -2,7 +2,7 @@
 	import theme from '$lib/actions/theme';
 </script>
 
-<section class="bg-gradient-to-r from-primarylight to-primarydark relative pt-10">
+<section id="home" class="bg-gradient-to-r from-primarylight to-primarydark relative pt-10">
 	<div class="absolute bottom-0 left-0 right-0 text-white dark:text-dark">
 		<svg viewBox="0 0 1920 309" xmlns="http://www.w3.org/2000/svg">
 			<path
