@@ -15,13 +15,13 @@
 	<div
 		class="container mx-auto relative flex flex-col md:flex-row items-center justify-center z-20 gap-20"
 	>
-		<div class="md:max-w-[400px] max-w-full">
+		<div class="md:max-w-[400px] max-w-full text-center md:text-left">
 			<h1 class="text-white font-bold text-4xl">Rigel</h1>
 			<h2 class="text-cyan-50 font-bold text-4xl">
 				La WebApp que te ayudara a adminstrar notas y todo lo necesario. {$theme}
 			</h2>
 		</div>
-		<div class="px-20">
+		<div class="lg:px-20">
 			<img src="/screenshots/{$theme}/login.png" width="300" alt="App login" />
 		</div>
 	</div>
