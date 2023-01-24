@@ -1,8 +1,8 @@
 <script lang="ts">
 	import { base } from '$app/paths';
-	import { onMount, onDestroy } from 'svelte';
+	import { onMount } from 'svelte';
 	import theme from '$lib/actions/theme';
-	import { THEME_KEY } from '$lib/constants';
+	import { THEME_KEY, APP_NAME } from '$lib/constants';
 	import { Theme } from '$lib/types';
 	import Icon from '@iconify/svelte';
 	import '../app.css';
@@ -43,7 +43,7 @@
 	<div class="container mx-auto flex py-3 items-center">
 		<div class="flex-1 flex items-center">
 			<img src={isTop ? '/icon_white.svg' : '/icon.svg'} alt="Logo" width="44" />
-			<h1 class="font-bold text-lg">Rigel</h1>
+			<h1 class="font-bold text-lg">{APP_NAME}</h1>
 		</div>
 		<div class="flex gap-8 items-center mr-10">
 			<a class="hover:underline" href="{base}/#home">Inicio</a>
