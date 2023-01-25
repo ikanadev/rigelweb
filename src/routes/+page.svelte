@@ -3,6 +3,7 @@
 	import Home from '$lib/sections/Home.svelte';
 	import Stats from '$lib/sections/Stats.svelte';
 	import Features from '$lib/sections/Features.svelte';
+	import Screenshots from '$lib/sections/Screenshots.svelte';
 
 	export let data: ServerData;
 </script>
@@ -10,3 +11,4 @@
 <Home />
 <Stats {data} />
 <Features />
+<Screenshots />
