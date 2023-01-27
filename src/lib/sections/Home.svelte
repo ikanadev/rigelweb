@@ -1,8 +1,9 @@
 <script lang="ts">
 	import theme from '$lib/actions/theme';
+	import { APP_NAME } from '$lib/constants';
 </script>
 
-<section id="home" class="bg-gradient-to-r from-primarylight to-primarydark relative pt-20">
+<section id="home" class="bg-gradient-to-r from-primarylight to-primarydark relative pt-6 md:pt-20">
 	<div class="absolute bottom-0 left-0 right-0 text-neutral-50 dark:text-dark">
 		<svg viewBox="0 0 1920 309" xmlns="http://www.w3.org/2000/svg">
 			<path
@@ -13,16 +14,16 @@
 		</svg>
 	</div>
 	<div
-		class="container mx-auto relative flex flex-col md:flex-row items-center justify-center z-20 gap-20"
+		class="container mx-auto relative flex flex-col md:flex-row items-center justify-center z-20 gap-4 md:gap-20 px-4"
 	>
 		<div class="md:max-w-[400px] max-w-full text-center md:text-left">
-			<h1 class="text-white font-bold text-4xl">Rigel</h1>
-			<h2 class="text-cyan-50 font-bold text-4xl">
-				La WebApp que te ayudara a adminstrar notas y todo lo necesario. {$theme}
+			<h1 class="text-white font-bold text-2xl md:text-4xl">{APP_NAME}</h1>
+			<h2 class="text-cyan-50 font-bold text-2xl md:text-4xl">
+				La WebApp que colabora con las actividades diarias del profesor de secundaria.
 			</h2>
 		</div>
 		<div class="lg:px-20">
-			<img src="/screenshots/{$theme}/login.png" width="300" alt="App login" />
+			<img src="/screenshots/{$theme}/login.png" class="w-64 md:w-80" alt="App login" />
 		</div>
 	</div>
 </section>
