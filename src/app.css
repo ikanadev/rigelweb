@@ -5,3 +5,21 @@
 html {
   scroll-behavior: smooth;
 }
+
+/* slider pagination */
+.blaze-pagination button {
+  width: 12px;
+  height: 12px;
+  border-radius: 6px;
+  background: #dfdfdf;
+  font-size: 0;
+}
+.blaze-pagination button.active {
+  background: #333;
+}
+body.dark .blaze-pagination button {
+  background: #424242;
+}
+body.dark .blaze-pagination button.active {
+  background: #fff;
+}

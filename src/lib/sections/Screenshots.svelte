@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import SectionTitle from '$lib/comps/SectionTitle.svelte';
+	import Icon from '@iconify/svelte';
 	import BlazeSlider from 'blaze-slider';
 
 	import 'blaze-slider/dist/blaze.css';
@@ -72,11 +73,15 @@
 						</div>
 					</div>
 				</div>
-				<!-- putting nav buttons and pagination in a custom structure -->
-				<div class="my-structure">
-					<button class="blaze-prev" aria-label="Go to previous slide" />
-					<div class="blaze-pagination" />
-					<button class="blaze-next" aria-label="Go to next slide" />
+
+				<div class="flex items-center justify-center">
+					<button class="blaze-prev" aria-label="Go to previous slide">
+						<Icon icon="material-symbols:chevron-left" width={30} />
+					</button>
+					<div class="blaze-pagination flex items-center gap-1.5 mx-2" />
+					<button class="blaze-next" aria-label="Go to next slide">
+						<Icon icon="material-symbols:chevron-right" width={30} />
+					</button>
 				</div>
 			</div>
 		</div>
