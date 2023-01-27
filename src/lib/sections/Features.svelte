@@ -6,9 +6,11 @@
 
 <SectionTitle title="Características" id="features" />
 <div class="bg-neutral-50 dark:bg-dark text-neutral-800 dark:text-white">
-	<section class="container mx-auto">
-		<h3 class="text-4xl font-semibold text-center">¿Qué te ofrece {APP_NAME}?</h3>
-		<div class="grid grid-cols-3 gap-8 pt-8 lg:px-20">
+	<section class="container mx-auto px-2">
+		<h3 class="text-3xl md:text-4xl font-semibold text-center">¿Qué te ofrece {APP_NAME}?</h3>
+		<div
+			class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-6 md:gap-y-8 pt-8 px-2 lg:px-12"
+		>
 			<Feature
 				iconName="carbon:group-presentation"
 				iconColor="#2979FF"
@@ -37,7 +39,7 @@
 				iconName="line-md:cloud-upload-loop"
 				iconColor="#0091EA"
 				title="Almacenamiento seguro"
-				text="Todos los datos son almacenados en la nube con sincronización constante cuando {APP_NAME} está online."
+				text="Todos los datos son almacenados en la nube con sincronizado automático cuando {APP_NAME} está online."
 			/>
 			<Feature
 				iconName="fluent:phone-desktop-24-regular"

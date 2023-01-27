@@ -13,7 +13,7 @@
 	};
 </script>
 
-<section class="bg-neutral-50 dark:bg-dark py-8 text-neutral-800 dark:text-white">
+<section class="bg-neutral-50 dark:bg-dark pt-8 text-neutral-800 dark:text-white">
 	<div class="container mx-auto grid gap-y-8 grid-cols-2 md:grid-cols-4">
 		<div class="flex flex-col items-center">
 			<p class="text-sm">Presente en</p>
