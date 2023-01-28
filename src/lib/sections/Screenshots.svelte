@@ -77,13 +77,7 @@
 				</div>
 
 				<div class="flex items-center justify-center">
-					<button class="blaze-prev" aria-label="Go to previous slide">
-						<Icon icon="material-symbols:chevron-left" width={30} />
-					</button>
-					<div class="blaze-pagination flex items-center gap-1.5 mx-2" />
-					<button class="blaze-next" aria-label="Go to next slide">
-						<Icon icon="material-symbols:chevron-right" width={30} />
-					</button>
+					<div class="blaze-pagination flex items-center gap-3 mx-2" />
 				</div>
 			</div>
 		</div>
