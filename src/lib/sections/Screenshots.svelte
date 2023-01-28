@@ -35,14 +35,15 @@
 	});
 </script>
 
-<SectionTitle id="screenshots" title="Capturas de pantalla" />
+<SectionTitle
+	id="screenshots"
+	title="Capturas de pantalla"
+	heading="Una interfaz simple y práctica"
+	description="Asistencias, calificaciones, estudiantes, materias y todo lo que necesitas a la mano. ¿Trabajando de noche?, prueba el modo nocturno."
+/>
 <div class="bg-neutral-50 dark:bg-dark text-neutral-800 dark:text-white">
 	<section class="container mx-auto px-2">
-		<h3 class="text-3xl md:text-4xl font-semibold text-center">
-			Una interface simple y entendible
-		</h3>
-
-		<div class="blaze-slider mt-8 px-8" bind:this={sliderRef}>
+		<div class="blaze-slider pt-8 px-8" bind:this={sliderRef}>
 			<div class="blaze-container">
 				<div class="blaze-track-container">
 					<div class="blaze-track">

@@ -4,10 +4,14 @@
 	import Feature from '$lib/comps/Feature.svelte';
 </script>
 
-<SectionTitle title="Características" id="features" />
+<SectionTitle
+	title="Características"
+	id="features"
+	heading="¿Qué te ofrece {APP_NAME}?"
+	description="{APP_NAME} es una WebApp cuyo objetivo es colaborar al docente con las actividades que realiza día a día, enfocándose en registro de asistencias, calificación de actividades/tareas y reportes semestrales/anuales."
+/>
 <div class="bg-neutral-50 dark:bg-dark text-neutral-800 dark:text-white">
 	<section class="container mx-auto px-2">
-		<h3 class="text-3xl md:text-4xl font-semibold text-center">¿Qué te ofrece {APP_NAME}?</h3>
 		<div
 			class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-6 md:gap-y-8 pt-8 px-2 lg:px-12"
 		>
