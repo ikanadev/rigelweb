@@ -1,2 +1,2 @@
 export const THEME_KEY = "THEME";
-export const APP_NAME = "MisClases";
+export const APP_NAME = "Profesca";
