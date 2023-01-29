@@ -15,8 +15,11 @@
 	<div class="max-w-md px-2 mx-auto text-white py-12 grid grid-cols-1 gap-8 text-lg md:text-xl">
 		<div class="flex flex-col">
 			<p>
-				1. Ingresa a <a href="https://app.profesca.com" class="underline underline-offset-2"
-					>app.profesca.com</a
+				1. Ingresa a <a
+					href="https://app.profesca.com"
+					target="_blank"
+					rel="noreferrer"
+					class="underline underline-offset-2">app.profesca.com</a
 				> desde Google Chrome.
 			</p>
 			<img
@@ -30,7 +33,7 @@
 				2. Accede al menú de Google Chrome presionando <Icon
 					icon="mdi:dots-vertical"
 					class="inline border rounded-sm"
-				/> y busca la opción "Instalar Aplicación"
+				/> y busca la opción "Instalar Aplicación".
 			</p>
 			<img
 				src="/installation/installButton.jpg"
