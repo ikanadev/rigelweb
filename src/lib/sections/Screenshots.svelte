@@ -59,9 +59,6 @@
 							<img src="/screenshots/{$theme}/students.png" alt="App login" />
 						</div>
 						<div class="flex justify-center">
-							<img src="/screenshots/{$theme}/excel.png" alt="App login" />
-						</div>
-						<div class="flex justify-center">
 							<img src="/screenshots/{$theme}/activities.png" alt="App login" />
 						</div>
 						<div class="flex justify-center">
