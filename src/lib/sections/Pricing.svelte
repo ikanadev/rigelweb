@@ -9,7 +9,7 @@
 	heading="Disfruta de nuestros planes anuales"
 	description=""
 />
-<section class="bg-neutral-50 dark:bg-dark pb-12">
+<section class="bg-neutral-50 dark:bg-dark pb-20">
 	<div
 		class="mx-auto max-w-2xl w-full px-4 grid gap-x-8 gap-y-4 grid-cols-1 sm:grid-cols-2 dark:text-white"
 	>
@@ -30,7 +30,7 @@
 					<li>Control de actividades/tareas</li>
 					<li>Reporte de asistencias trimestrales y anuales</li>
 					<li>Reporte de notas trimestrales y anuales</li>
-					<li>Hasta un máximo de <strong>4 materias</strong></li>
+					<li>Hasta un máximo de <strong>4 cursos</strong></li>
 				</ul>
 			</div>
 		</div>
@@ -54,8 +54,8 @@
 			</p>
 			<div class="self-start">
 				<ul class="list-disc ml-4">
-					<li>Todo de la versión <strong>estandar</strong></li>
-					<li>Hasta un máximo de <strong>25 materias</strong></li>
+					<li>Todo lo incluido en el plan <strong>estándar</strong></li>
+					<li>Hasta un máximo de <strong>25 cursos</strong></li>
 				</ul>
 			</div>
 		</div>

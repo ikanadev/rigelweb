@@ -3,7 +3,7 @@
 	import { onMount } from 'svelte';
 	import { fly } from 'svelte/transition';
 	import theme from '$lib/actions/theme';
-	import { THEME_KEY, APP_NAME } from '$lib/constants';
+	import { THEME_KEY, APP_NAME, EMAIL_URL, TELEGRAM_URL } from '$lib/constants';
 	import { Theme } from '$lib/types';
 	import Icon from '@iconify/svelte';
 	import '../app.css';
@@ -46,7 +46,7 @@
 		? 'shadow-md shadow-neutral-300 dark:shadow-neutral-700'
 		: ''}"
 >
-	<div class="container mx-auto flex py-3 items-center">
+	<div class="container mx-auto flex py-3 px-2 items-center">
 		<div class="flex-1 flex items-center">
 			<img src={isTop ? '/icon_white.svg' : '/icon.svg'} alt="Logo" class="w-8 md:w-10" />
 			<h1 class="font-bold text-lg">{APP_NAME}</h1>
@@ -90,7 +90,67 @@
 
 <slot />
 
-<footer class="bg-white dark:bg-dark" style="height: 1200px;">
-	Footer
-	{isTop ? 'Top' : 'no Top'}
+<footer class="pt-8 pb-2 bg-neutral-200 dark:bg-neutral-800 dark:text-white">
+	<div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-x-10 gap-y-5">
+		<div class="flex flex-col">
+			<div class="flex flex-col md:flex-row items-start md:items-center">
+				<img src="/icon.svg" alt="Logo" class="w-12" />
+				<div>
+					<h4 class="font-semibold text-lg">{APP_NAME}</h4>
+					<p>
+						La WebApp de los profesores de <Icon
+							icon="emojione-v1:flag-for-bolivia"
+							class="inline w-6 h-6 mb-1"
+						/> Bolivia.
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="flex flex-col">
+			<h4 class="font-semibold text-lg">Secciones</h4>
+			<ul class="mt-2 ml-5 list-disc">
+				<li>
+					<a href="{base}/#home" class="hover:underline">Inicio</a>
+				</li>
+				<li>
+					<a href="{base}/#features" class="hover:underline"> Características </a>
+				</li>
+				<li>
+					<a href="{base}/#screenshots" class="hover:underline">Capturas</a>
+				</li>
+				<li>
+					<a href="{base}/#installation" class="hover:underline">Instalación</a>
+				</li>
+				<li>
+					<a href="{base}/#pricing" class="hover:underline">Precio</a>
+				</li>
+			</ul>
+		</div>
+		<div class="flex flex-col">
+			<h4 class="font-semibold text-lg">¿Sugerencias o dudas?</h4>
+			<a
+				href={TELEGRAM_URL}
+				target="_blank"
+				rel="noreferrer"
+				class="flex items-center mt-2 hover:underline"
+			>
+				<Icon icon="icon-park-outline:telegram" class="w-7 h-7 mr-2 text-[#0088CC]" />
+				Únete a la comunidad en Telegram
+			</a>
+			<a
+				href="mailto:{EMAIL_URL}"
+				target="_blank"
+				rel="noreferrer"
+				class="flex items-center mt-2 hover:underline"
+			>
+				<Icon icon="cib:gmail" class="w-7 h-7 mr-2 text-[#EA4335]" />
+				Contáctanos por Gmail
+			</a>
+		</div>
+	</div>
+	<div class="container mx-auto px-4 mt-8">
+		<p class="text-sm border-t border-neutral-400 dark:border-neutral-600 pt-2">
+			Copyright © 2023 {APP_NAME}. Todos los derechos reservados.
+		</p>
+	</div>
 </footer>
