@@ -1,5 +1,5 @@
 export const load = async () => {
-	await new Promise((res) => setTimeout(res, 500));
+	await new Promise((res) => setTimeout(res, 10));
 	return {
 		stats: {
 			teachers: 150,

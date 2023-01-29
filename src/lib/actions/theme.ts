@@ -6,7 +6,6 @@ function createThemeStore() {
 	const theme = writable(Theme.Light);
 
 	function toggle() {
-		console.log("toggling theme");
 		const docNode = document.querySelector("body");
 		if (!docNode) return;
 		if (docNode.classList.contains(Theme.Dark)) {
