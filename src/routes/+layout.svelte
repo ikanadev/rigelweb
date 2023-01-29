@@ -27,7 +27,7 @@
 
 	onMount(() => {
 		handleScroll();
-		window.addEventListener('scroll', handleScroll);
+		window.addEventListener('scroll', handleScroll, { passive: true });
 		const themeStr = localStorage.getItem(THEME_KEY);
 		if (!themeStr) return;
 		if (themeStr === Theme.Dark) {
@@ -58,10 +58,14 @@
 			<a href="{base}/#installation">Instalación</a>
 			<a href="{base}/#pricing">Precio</a>
 		</nav>
-		<button on:click={theme.toggle} class="text-yellow-400 dark:text-sky-400 p-1">
+		<button
+			on:click={theme.toggle}
+			class="text-yellow-400 dark:text-sky-400 p-1"
+			aria-label="Cambiar tema"
+		>
 			<Icon icon={$theme === Theme.Light ? 'bi:sun-fill' : 'bi:moon-stars-fill'} width={24} />
 		</button>
-		<button class="mx-2 md:hidden" on:click={toggleMenu}>
+		<button class="mx-2 md:hidden" on:click={toggleMenu} aria-label="Abrir menu">
 			<Icon icon="heroicons:bars-3-20-solid" width={24} />
 		</button>
 	</div>
@@ -74,7 +78,7 @@
 		class="fixed left-0 top-0 right-0 bottom-0 text-black dark:text-white bg-white dark:bg-dark z-50 p-4"
 	>
 		<div class="flex justify-end">
-			<button on:click={toggleMenu}>
+			<button on:click={toggleMenu} aria-label="Cerrar menu">
 				<Icon icon="material-symbols:close-rounded" width={28} />
 			</button>
 		</div>

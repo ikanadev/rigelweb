@@ -25,7 +25,8 @@
 			<img
 				src="/installation/appUrl.jpg"
 				alt="App url en Google Chrome"
-				class="w-full rounded-lg"
+				width="448"
+				class="rounded-lg"
 			/>
 		</div>
 		<div class="flex flex-col">
@@ -38,7 +39,8 @@
 			<img
 				src="/installation/installButton.jpg"
 				alt="Botón de instalación en Google Chrome"
-				class="w-full rounded-lg"
+				width="448"
+				class="rounded-lg"
 			/>
 		</div>
 		<div class="flex flex-col">
@@ -49,7 +51,8 @@
 			<img
 				src="/installation/appInstalledIcon.jpg"
 				alt="Ícono de la App una vez instalada"
-				class="w-full rounded-lg"
+				width="448"
+				class="rounded-lg"
 			/>
 		</div>
 	</div>

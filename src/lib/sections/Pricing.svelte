@@ -35,7 +35,7 @@
 			</div>
 		</div>
 		<div
-			class="flex flex-col items-center px-6 py-8 shadow-xl shadow-primarylight dark:shadow-primary rounded-lg bg-primary dark:bg-primarydark text-white"
+			class="flex flex-col items-center px-6 py-8 shadow-xl shadow-primarylight dark:shadow-primary rounded-lg bg-primarydark text-white"
 		>
 			<div class="text-yellow-300 mb-2">
 				<Icon class="w-12 h-12" icon="ic:round-star" />

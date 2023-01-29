@@ -13,6 +13,6 @@
 		<h3 class="text-3xl md:text-4xl font-semibold underline underline-offset-3 text-center">
 			{heading}
 		</h3>
-		<h5 class="text-lg md:text-xl mt-3 text-center px-2 leading-6">{description}</h5>
+		<h4 class="text-lg md:text-xl mt-3 text-center px-2 leading-6">{description}</h4>
 	</div>
 </div>
