@@ -5,6 +5,7 @@
 	import Features from '$lib/sections/Features.svelte';
 	import Screenshots from '$lib/sections/Screenshots.svelte';
 	import Installation from '$lib/sections/Installation.svelte';
+	import Pricing from '$lib/sections/Pricing.svelte';
 
 	export let data: ServerData;
 </script>
@@ -14,3 +15,4 @@
 <Features />
 <Screenshots />
 <Installation />
+<Pricing />
