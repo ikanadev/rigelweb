@@ -4,6 +4,7 @@
 	import Stats from '$lib/sections/Stats.svelte';
 	import Features from '$lib/sections/Features.svelte';
 	import Screenshots from '$lib/sections/Screenshots.svelte';
+	import Installation from '$lib/sections/Installation.svelte';
 
 	export let data: ServerData;
 </script>
@@ -12,3 +13,4 @@
 <Stats {data} />
 <Features />
 <Screenshots />
+<Installation />

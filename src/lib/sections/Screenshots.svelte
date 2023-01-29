@@ -1,7 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import SectionTitle from '$lib/comps/SectionTitle.svelte';
-	import Icon from '@iconify/svelte';
 	import BlazeSlider from 'blaze-slider';
 
 	import 'blaze-slider/dist/blaze.css';
@@ -78,7 +77,7 @@
 				</div>
 
 				<div class="flex items-center justify-center">
-					<div class="blaze-pagination flex items-center gap-3 mx-2" />
+					<div class="blaze-pagination flex items-center gap-3 mx-2 h-1" />
 				</div>
 			</div>
 		</div>

@@ -52,11 +52,11 @@
 			<h1 class="font-bold text-lg">{APP_NAME}</h1>
 		</div>
 		<nav class="hidden md:flex gap-8 items-center mr-10">
-			<a class="hover:underline" href="{base}/#home">Inicio</a>
+			<a href="{base}/#home">Inicio</a>
 			<a href="{base}/#features"> Características </a>
 			<a href="{base}/#screenshots">Capturas</a>
+			<a href="{base}/#installation">Instalación</a>
 			<a href="{base}/#pricing">Precio</a>
-			<a href="{base}/#contact">Contacto</a>
 		</nav>
 		<button on:click={theme.toggle} class="text-yellow-400 dark:text-sky-400 p-1">
 			<Icon icon={$theme === Theme.Light ? 'bi:sun-fill' : 'bi:moon-stars-fill'} width={24} />
@@ -82,8 +82,8 @@
 			<a href="{base}/#home" on:click={toggleMenu}>Inicio</a>
 			<a href="{base}/#features" on:click={toggleMenu}> Características </a>
 			<a href="{base}/#screenshots" on:click={toggleMenu}>Capturas</a>
+			<a href="{base}/#installation" on:click={toggleMenu}>Instalación</a>
 			<a href="{base}/#pricing" on:click={toggleMenu}>Precio</a>
-			<a href="{base}/#contact" on:click={toggleMenu}>Contacto</a>
 		</nav>
 	</div>
 {/if}
