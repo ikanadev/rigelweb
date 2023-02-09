@@ -1,5 +1,4 @@
 <script lang="ts">
-	import type { ServerData } from '$lib/types';
 	import Home from '$lib/sections/Home.svelte';
 	import Stats from '$lib/sections/Stats.svelte';
 	import Features from '$lib/sections/Features.svelte';
@@ -8,8 +7,6 @@
 	import Pricing from '$lib/sections/Pricing.svelte';
 	import { APP_NAME } from '$lib/constants';
 	import { base } from '$app/paths';
-
-	export let data: ServerData;
 </script>
 
 <svelte:head>
@@ -34,7 +31,7 @@
 	/>
 </svelte:head>
 <Home />
-<Stats {data} />
+<Stats />
 <Features />
 <Screenshots />
 <Installation />
