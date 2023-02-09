@@ -2,7 +2,7 @@
 	import Icon from '@iconify/svelte';
 
 	import SectionTitle from '$lib/comps/SectionTitle.svelte';
-	import { APP_NAME } from '$lib/constants';
+	import { APP_NAME, WEB_APP_URL } from '$lib/constants';
 </script>
 
 <SectionTitle
@@ -15,18 +15,18 @@
 	<div class="max-w-md px-2 mx-auto text-white py-12 grid grid-cols-1 gap-8 text-lg md:text-xl">
 		<div class="flex flex-col">
 			<p>
-				1. Ingresa a <a
-					href="https://app.profesca.com"
+				1. Ingresa a la WebApp <a
+					href={WEB_APP_URL}
 					target="_blank"
 					rel="noreferrer"
-					class="underline underline-offset-2">app.profesca.com</a
-				> desde Google Chrome.
+					class="underline underline-offset-2">{APP_NAME}</a
+				> presionando el botón flotante desde Google Chrome.
 			</p>
 			<img
 				src="/installation/appUrl.jpg"
 				alt="App url en Google Chrome"
 				width="448"
-				class="rounded-lg"
+				class="rounded-lg mt-2"
 			/>
 		</div>
 		<div class="flex flex-col">

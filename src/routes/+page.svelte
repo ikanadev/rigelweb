@@ -10,10 +10,10 @@
 </script>
 
 <svelte:head>
-	<title>{APP_NAME}, la WebApp de los profesores</title>
+	<title>{APP_NAME}, una manera sencilla y efectiva de administrar tus clases</title>
 	<meta
 		name="description"
-		content="{APP_NAME}, la Aplicación Web pensada para los profesores que ayuda con el control de asistencias, registro de notas y reportes trimestrales en el nivel secundario."
+		content="Control de asistencias, registro de notas, administración de estudiantes, materias, reportes trimestrales y mucho más."
 	/>
 	<meta
 		name="keywords"
@@ -22,9 +22,9 @@
 	<!-- Open Graph meta tags -->
 	<meta property="og:image" content="{base}/openGraphBanner.png" />
 	<meta property="og:image:type" content="image/png" />
-	<meta property="og:image:width" content="343" />
-	<meta property="og:image:height" content="160" />
-	<meta property="og:title" content="{APP_NAME}, la WebApp de los profesores." />
+	<meta property="og:image:width" content="290" />
+	<meta property="og:image:height" content="156" />
+	<meta property="og:title" content="{APP_NAME}, una manera sencilla de administrar tus clases." />
 	<meta
 		property="og:description"
 		content="{APP_NAME} te ayuda con el control de asistencias, registro de notas, reportes trimestrales/anuales y mucho más."

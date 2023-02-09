@@ -3,12 +3,7 @@
 	import Icon from '@iconify/svelte';
 </script>
 
-<SectionTitle
-	title="Precio"
-	id="pricing"
-	heading="Disfruta de nuestros planes anuales"
-	description=""
-/>
+<SectionTitle title="Precio" id="pricing" heading="Un pago al año es suficiente" description="" />
 <section class="bg-neutral-50 dark:bg-dark pb-20">
 	<div
 		class="mx-auto max-w-2xl w-full px-4 grid gap-x-8 gap-y-4 grid-cols-1 sm:grid-cols-2 dark:text-white"

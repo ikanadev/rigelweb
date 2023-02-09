@@ -38,7 +38,7 @@
 	id="screenshots"
 	title="Capturas de pantalla"
 	heading="Una interfaz simple y práctica"
-	description="Asistencias, calificaciones, estudiantes, materias y todo lo que necesitas a la mano. ¿Trabajando de noche?, prueba el modo nocturno."
+	description="Asistencias, calificaciones, estudiantes, materias y todo lo que necesitas a la mano. ¿Trabajando de noche?, tenemos modo nocturno."
 />
 <div class="bg-neutral-50 dark:bg-dark text-neutral-800 dark:text-white">
 	<section class="container mx-auto px-2">

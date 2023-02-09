@@ -16,11 +16,13 @@
 	<div
 		class="container mx-auto relative flex flex-col md:flex-row items-center justify-center z-20 gap-4 md:gap-20 px-4"
 	>
-		<div class="md:max-w-[400px] max-w-full text-center md:text-left md:-mt-16">
-			<h1 class="text-white font-bold text-2xl md:text-4xl">{APP_NAME}</h1>
-			<h2 class="text-cyan-50 font-bold text-2xl md:text-4xl">
-				La WebApp que colabora con las actividades diarias del profesor de secundaria.
+		<div class="md:max-w-[500px] max-w-full text-center md:text-left md:-mt-28">
+			<h2 class="text-cyan-50 font-bold text-2xl md:text-5xl">
+				{APP_NAME} - una manera sencilla y efectiva de administrar tus clases
 			</h2>
+			<h3 class="text-cyan-50 text-xl md:text-2xl mt-2">
+				Te echamos una mano las notas, asistencias, estudiantes, tareas y mucho m&aacute;s...
+			</h3>
 		</div>
 		<div class="lg:px-20">
 			<img src="/screenshots/{$theme}/login.png" class="w-64 md:w-80" alt="App login" />
