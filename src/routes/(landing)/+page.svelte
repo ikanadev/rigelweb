@@ -10,10 +10,10 @@
 </script>
 
 <svelte:head>
-	<title>{APP_NAME}, una manera sencilla y efectiva de administrar tus clases</title>
+	<title>{APP_NAME}</title>
 	<meta
 		name="description"
-		content="Control de asistencias, registro de notas, administración de estudiantes, materias, reportes trimestrales y mucho más."
+		content="{APP_NAME} Control de asistencias, registro de notas, administración de estudiantes, materias, reportes trimestrales y mucho más."
 	/>
 	<meta
 		name="keywords"
