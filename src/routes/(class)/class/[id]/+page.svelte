@@ -141,7 +141,7 @@
 	{#if showScores}
 		<div id="table_container" class="relative overflow-x-auto pb-4">
 			<table>
-				<thead class="bg-slate-100">
+				<thead class="bg-slate-200">
 					<tr>
 						<th
 							rowspan={scoresView === ScoresView.Detailed
@@ -149,8 +149,8 @@
 								: scoresView === ScoresView.Area
 								? 2
 								: 1}
-							class="sticky left-0 bg-slate-100 whitespace-nowrap">
-							Nombre(s) y apellido(s)
+							class="sticky left-0 bg-slate-200 whitespace-nowrap">
+							Apellido(s) y nombre(s)
 						</th>
 						{#each class_periods as cp}
 							<th
@@ -207,11 +207,11 @@
 						</tr>
 					{/if}
 				</thead>
-				<tbody class="bg-slate-100">
+				<tbody class="bg-slate-200">
 					{#each filteredStudents as student}
 						<tr class="text-center border-t border-white">
 							<td
-								class="whitespace-nowrap sticky left-0 bg-slate-100 text-left {student.year_score <=
+								class="whitespace-nowrap sticky left-0 bg-slate-200 text-left {student.year_score <=
 								50
 									? 'text-red-600'
 									: ''}">
