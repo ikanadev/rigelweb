@@ -2,10 +2,31 @@
 	import { APP_NAME } from '$lib/constants';
 	import { base } from '$app/paths';
 	import type { PageData } from './$types';
+
+	enum ScoresView {
+		Detailed = 'Detailed',
+		Area = 'Area',
+		Period = 'Period'
+	}
+
 	export let data: PageData;
 	const { class_data, class_periods, students } = data;
-	console.log(data);
+	let scoresView: ScoresView = ScoresView.Detailed;
 	let showScores = true;
+	let studentFilter = '';
+
+	console.log(data);
+
+	$: filteredStudents =
+		studentFilter.trim() === ''
+			? students
+			: students.filter((student) => {
+					let noSpacesName = `${student.name.toLowerCase().replace(/\s/g, '')}${student.last_name
+						.toLowerCase()
+						.replace(/\s/g, '')}`;
+					return noSpacesName.includes(studentFilter.toLowerCase().replace(/\s/g, ''));
+			  });
+
 	function toggleShowScores() {
 		showScores = !showScores;
 	}
@@ -15,12 +36,10 @@
 	<title>{class_data.grade.name} - {class_data.subject.name}</title>
 	<meta
 		name="description"
-		content="{APP_NAME}: Planilla {class_data.grade.name} '{class_data.parallel}'"
-	/>
+		content="{APP_NAME}: Planilla {class_data.grade.name} '{class_data.parallel}'" />
 	<meta
 		name="keywords"
-		content="profesor, clases, notas, colegio, estudiante, asistencia, secundaria, educación, docente, trimestre, escolar, Bolivia, Avelino Siñani"
-	/>
+		content="profesor, clases, notas, colegio, estudiante, asistencia, secundaria, educación, docente, trimestre, escolar, Bolivia, Avelino Siñani" />
 	<!-- Open Graph meta tags -->
 	<meta property="og:image" content="{base}/openGraphBanner.png" />
 	<meta property="og:image:type" content="image/png" />
@@ -28,14 +47,12 @@
 	<meta property="og:image:height" content="156" />
 	<meta
 		property="og:title"
-		content="{APP_NAME}: Planilla {class_data.grade.name} '{class_data.parallel}'"
-	/>
+		content="{APP_NAME}: Planilla {class_data.grade.name} '{class_data.parallel}'" />
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
 	<link rel="preconnect" href="https://fonts.gstatic.com" />
 	<link
 		href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500;600;700&display=swap"
-		rel="stylesheet"
-	/>
+		rel="stylesheet" />
 </svelte:head>
 
 <main class="container mx-auto py-4">
@@ -44,27 +61,6 @@
 	</h1>
 
 	<div class="grid grid-cols-3 gap-4 mb-2">
-		<div />
-		<div class="flex justify-center font-semibold">
-			<button
-				class="py-0 px-2 border border-primary rounded-md rounded-r-none {showScores
-					? 'bg-primary text-white'
-					: 'bg-white text-primary'}"
-				on:click={toggleShowScores}
-				disabled={showScores}>Notas</button
-			>
-			<button
-				class="py-0 px-2 border border-primary rounded-md rounded-l-none {!showScores
-					? 'bg-primary text-white'
-					: 'bg-white text-primarylight'}"
-				on:click={toggleShowScores}
-				disabled={!showScores}>Asistencias</button
-			>
-		</div>
-		<div />
-	</div>
-
-	<div class="grid grid-cols-3 gap-4 mb-4">
 		<div>
 			<div>
 				<strong class="font-semibold">Colegio:</strong>
@@ -105,40 +101,74 @@
 		</div>
 	</div>
 
+	<div class="grid grid-cols-3 gap-4 mb-2">
+		<div />
+		<div class="flex justify-center font-bold text-lg">
+			<button
+				class="py-0 px-2 border border-slate-500 rounded-md rounded-r-none {showScores
+					? 'bg-slate-500 text-white'
+					: 'bg-white text-slate-500'}"
+				on:click={toggleShowScores}
+				disabled={showScores}>Notas</button>
+			<button
+				class="py-0 px-2 border border-slate-500 rounded-md rounded-l-none {!showScores
+					? 'bg-slate-500 text-white'
+					: 'bg-white text-slate-500'}"
+				on:click={toggleShowScores}
+				disabled={!showScores}>Asistencias</button>
+		</div>
+		<div />
+	</div>
+
+	{#if showScores}
+		<div class="flex justify-end items-center mb-4">
+			<p>Buscar:</p>
+			<input
+				bind:value={studentFilter}
+				placeholder="Nombre o apellido"
+				class="border mr-4 ml-1 px-2 py-0.5 rounded" />
+			<p>Vista:</p>
+			<select bind:value={scoresView} class="ml-1 bg-slate-300 py-0.5 px-2 font-semibold">
+				<option value={ScoresView.Detailed}>Detallada</option>
+				<option value={ScoresView.Area}>Por &Aacute;rea</option>
+				<option value={ScoresView.Period}>Por Periodo</option>
+			</select>
+		</div>
+	{:else}
+		<div>Attendances controls</div>
+	{/if}
+
 	{#if showScores}
 		<div id="table_container" class="relative overflow-x-auto pb-4">
 			<table>
 				<thead class="bg-slate-100">
 					<tr>
-						<th rowspan="3" class="sticky left-0 bg-slate-100">Nombre(s) y apellido(s)</th>
+						<th rowspan="3" class="sticky left-0 bg-slate-100 whitespace-nowrap"
+							>Nombre(s) y apellido(s)</th>
 						{#each class_periods as cp}
 							<th
 								class="bg-slate-500 text-xl font-bold text-white border-r-8 border-white"
 								colspan={cp.areas.length +
 									cp.areas.reduce((sum, area) => sum + area.activities.length, 0) +
-									1}
-							>
+									1}>
 								{cp.period.name}
 							</th>
 						{/each}
 						<th rowspan="3" colspan="2" class="bg-slate-800 text-white font-bold text-xl"
-							>NOTA FINAL</th
-						>
+							>NOTA FINAL</th>
 					</tr>
 					<tr>
 						{#each class_periods as cp}
 							{#each cp.areas as area}
 								<th
 									colspan={area.activities.length + 1}
-									class="bg-slate-300 border-r-2 border-white font-semibold whitespace-nowrap"
-								>
+									class="bg-slate-300 border-r-2 border-white font-semibold whitespace-nowrap">
 									{area.name} ({area.points})
 								</th>
 							{/each}
 							<th
 								rowspan="2"
-								class="bg-slate-500 text-xl font-bold text-white border-r-8 border-white"
-							>
+								class="bg-slate-500 text-xl font-bold text-white border-r-8 border-white">
 								Nota
 							</th>
 						{/each}
@@ -157,14 +187,13 @@
 					</tr>
 				</thead>
 				<tbody class="bg-slate-100">
-					{#each students as student}
-						<tr class="text-center border-b border-white">
+					{#each filteredStudents as student}
+						<tr class="text-center border-t border-white">
 							<td
 								class="whitespace-nowrap sticky left-0 bg-slate-100 text-left {student.year_score <=
 								50
 									? 'text-red-600'
-									: ''}"
-							>
+									: ''}">
 								{student.last_name}
 								{student.name}
 							</td>
@@ -189,8 +218,7 @@
 							<td
 								class="text-lg font-bold bg-slate-800 {student.year_score < 51
 									? 'text-red-400'
-									: 'text-green-500'}"
-							>
+									: 'text-green-500'}">
 								{student.year_score < 51 ? 'Reprobado' : 'Aprobado'}
 							</td>
 						</tr>
