@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { APP_NAME } from '$lib/constants';
-	import { base } from '$app/paths';
 	import type { PageData } from './$types';
+	import { page } from '$app/stores';
 
 	enum ScoresView {
 		Detailed = 'Detailed',
@@ -41,7 +41,7 @@
 		name="keywords"
 		content="profesor, clases, notas, colegio, estudiante, asistencia, secundaria, educación, docente, trimestre, escolar, Bolivia, Avelino Siñani" />
 	<!-- Open Graph meta tags -->
-	<meta property="og:image" content="{base}/openGraphBanner.png" />
+	<meta property="og:image" content="{$page.url.origin}/openGraphBanner.png" />
 	<meta property="og:image:type" content="image/png" />
 	<meta property="og:image:width" content="290" />
 	<meta property="og:image:height" content="156" />
@@ -126,9 +126,9 @@
 			<input
 				bind:value={studentFilter}
 				placeholder="Nombre o apellido"
-				class="border mr-4 ml-1 px-2 py-0.5 rounded" />
+				class="border mr-4 ml-1 px-2 py-0.5 rounded bg-slate-100" />
 			<p>Vista:</p>
-			<select bind:value={scoresView} class="ml-1 bg-slate-300 py-0.5 px-2 font-semibold">
+			<select bind:value={scoresView} class="ml-1 bg-slate-200 py-0.5 px-2 font-semibold">
 				<option value={ScoresView.Detailed}>Detallada</option>
 				<option value={ScoresView.Area}>Por &Aacute;rea</option>
 				<option value={ScoresView.Period}>Por Periodo</option>
