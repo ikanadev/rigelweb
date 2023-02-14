@@ -30,9 +30,15 @@
 		property="og:title"
 		content="{APP_NAME}: Planilla {class_data.grade.name} '{class_data.parallel}'"
 	/>
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" />
+	<link
+		href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500;600;700&display=swap"
+		rel="stylesheet"
+	/>
 </svelte:head>
 
-<main class="container mx-auto overflow-x-auto py-4">
+<main class="container mx-auto py-4">
 	<h1 class="text-lg font-semibold text-center mb-2">
 		Planilla {class_data.grade.name.toLowerCase()} paralelo "{class_data.parallel}"
 	</h1>
@@ -58,7 +64,7 @@
 		<div />
 	</div>
 
-	<div class="grid grid-cols-3 gap-4 text-sm">
+	<div class="grid grid-cols-3 gap-4 mb-4">
 		<div>
 			<div>
 				<strong class="font-semibold">Colegio:</strong>
@@ -98,4 +104,129 @@
 			</div>
 		</div>
 	</div>
+
+	{#if showScores}
+		<div id="table_container" class="relative overflow-x-auto pb-4">
+			<table>
+				<thead class="bg-slate-100">
+					<tr>
+						<th rowspan="3" class="sticky left-0 bg-slate-100">Nombre(s) y apellido(s)</th>
+						{#each class_periods as cp}
+							<th
+								class="bg-slate-500 text-xl font-bold text-white border-r-8 border-white"
+								colspan={cp.areas.length +
+									cp.areas.reduce((sum, area) => sum + area.activities.length, 0) +
+									1}
+							>
+								{cp.period.name}
+							</th>
+						{/each}
+						<th rowspan="3" colspan="2" class="bg-slate-800 text-white font-bold text-xl"
+							>NOTA FINAL</th
+						>
+					</tr>
+					<tr>
+						{#each class_periods as cp}
+							{#each cp.areas as area}
+								<th
+									colspan={area.activities.length + 1}
+									class="bg-slate-300 border-r-2 border-white font-semibold whitespace-nowrap"
+								>
+									{area.name} ({area.points})
+								</th>
+							{/each}
+							<th
+								rowspan="2"
+								class="bg-slate-500 text-xl font-bold text-white border-r-8 border-white"
+							>
+								Nota
+							</th>
+						{/each}
+					</tr>
+					<tr>
+						{#each class_periods as cp}
+							{#each cp.areas as area}
+								{#each area.activities as act}
+									<th class="whitespace-nowrap text-sm border-r border-white">
+										{act.name.length > 15 ? `${act.name.substring(0, 12)}.` : act.name}
+									</th>
+								{/each}
+								<th class="bg-slate-300 border-r-2 border-white font-semibold">Prom.</th>
+							{/each}
+						{/each}
+					</tr>
+				</thead>
+				<tbody class="bg-slate-100">
+					{#each students as student}
+						<tr class="text-center border-b border-white">
+							<td
+								class="whitespace-nowrap sticky left-0 bg-slate-100 text-left {student.year_score <=
+								50
+									? 'text-red-600'
+									: ''}"
+							>
+								{student.last_name}
+								{student.name}
+							</td>
+							{#each class_periods as cp}
+								{#each cp.areas as area}
+									{#each area.activities as act}
+										<td class="border-r border-white">
+											{student.scores_map[act.id]?.points ?? '-'}
+										</td>
+									{/each}
+									<!-- Nota area -->
+									<td class="bg-slate-300 border-r-2 border-white font-semibold">
+										{student.scores[cp.id].area_scores[area.id]}
+									</td>
+								{/each}
+								<!-- Nota periodo (nota trimestral)-->
+								<td class="border-r-8 border-white bg-slate-500 text-white text-lg font-bold">
+									{student.scores[cp.id].score}
+								</td>
+							{/each}
+							<td class="bg-slate-800 text-white text-lg font-bold">{student.year_score}</td>
+							<td
+								class="text-lg font-bold bg-slate-800 {student.year_score < 51
+									? 'text-red-400'
+									: 'text-green-500'}"
+							>
+								{student.year_score < 51 ? 'Reprobado' : 'Aprobado'}
+							</td>
+						</tr>
+					{/each}
+				</tbody>
+			</table>
+		</div>
+	{:else}
+		<div>Attendances</div>
+	{/if}
 </main>
+
+<style>
+	th,
+	td {
+		padding-left: 3px;
+		padding-right: 3px;
+	}
+	main {
+		font-family: 'Assistant', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+			Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	}
+	#table_container::-webkit-scrollbar {
+		width: 8px;
+		height: 8px;
+	}
+	#table_container::-webkit-scrollbar-track {
+		border-radius: 4px;
+		background-color: #e7e7e7;
+		border: 1px solid #cacaca;
+	}
+	#table_container::-webkit-scrollbar-thumb {
+		border-radius: 4px;
+		background-color: #999;
+	}
+	#table_container::-webkit-scrollbar-thumb:hover {
+		background-color: #777;
+	}
+</style>
