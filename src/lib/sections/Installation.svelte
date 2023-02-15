@@ -9,39 +9,35 @@
 	title="Instalación"
 	id="installation"
 	heading="Tan fácil como visitar un sitio web"
-	description="Sigue estos pasos para instalar {APP_NAME} en tu celular. El uso desde un ordenador no requiere instalación."
-/>
+	description="Sigue estos pasos para instalar {APP_NAME} en tu celular. El uso desde un ordenador no requiere instalación." />
 <section class="bg-gradient-to-tr from-primarylight to-primarydark">
 	<div class="max-w-md px-2 mx-auto text-white py-12 grid grid-cols-1 gap-8 text-lg md:text-xl">
 		<div class="flex flex-col">
 			<p>
-				1. Ingresa a la WebApp <a
+				1. Ingresa al sitio <a
 					href={WEB_APP_URL}
 					target="_blank"
 					rel="noreferrer"
-					class="underline underline-offset-2">{APP_NAME}</a
-				> presionando el botón flotante desde Google Chrome.
+					class="underline underline-offset-2">app.auleca.com</a>
+				presionando el botón flotante "Ir a {APP_NAME}" desde Google Chrome en tu celular.
 			</p>
 			<img
 				src="/installation/appUrl.jpg"
 				alt="App url en Google Chrome"
 				width="448"
-				class="rounded-lg mt-2"
-			/>
+				class="rounded-lg mt-2" />
 		</div>
 		<div class="flex flex-col">
 			<p>
-				2. Accede al menú de Google Chrome presionando <Icon
+				2. Una vez all&iacute;, accede al menú de Google Chrome presionando <Icon
 					icon="mdi:dots-vertical"
-					class="inline border rounded-sm"
-				/> y busca la opción "Instalar Aplicación".
+					class="inline border rounded-sm" /> y busca la opción "Instalar Aplicación".
 			</p>
 			<img
 				src="/installation/installButton.jpg"
 				alt="Botón de instalación en Google Chrome"
 				width="448"
-				class="rounded-lg"
-			/>
+				class="rounded-lg" />
 		</div>
 		<div class="flex flex-col">
 			<p>
@@ -52,8 +48,7 @@
 				src="/installation/appInstalledIcon.jpg"
 				alt="Ícono de la App una vez instalada"
 				width="448"
-				class="rounded-lg"
-			/>
+				class="rounded-lg" />
 		</div>
 	</div>
 </section>
