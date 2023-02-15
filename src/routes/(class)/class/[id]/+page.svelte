@@ -105,17 +105,17 @@
 		</div>
 	</div>
 
-	<div class="grid grid-cols-3 gap-4 mb-2">
+	<div class="grid grid-cols-3 gap-4">
 		<div />
 		<div class="flex justify-center font-bold text-lg">
 			<button
-				class="py-0 px-2 border border-slate-500 rounded-md rounded-r-none {showScores
+				class="py-0 px-2 border border-slate-500 rounded-md rounded-r-none shadow-md {showScores
 					? 'bg-slate-500 text-white'
 					: 'bg-white text-slate-500'}"
 				on:click={toggleShowScores}
 				disabled={showScores}>Notas</button>
 			<button
-				class="py-0 px-2 border border-slate-500 rounded-md rounded-l-none {!showScores
+				class="py-0 px-2 border border-slate-500 rounded-md rounded-l-none shadow-md {!showScores
 					? 'bg-slate-500 text-white'
 					: 'bg-white text-slate-500'}"
 				on:click={toggleShowScores}
