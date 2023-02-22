@@ -1,6 +1,6 @@
 <script lang="ts">
 	import Home from '$lib/sections/Home.svelte';
-	import Stats from '$lib/sections/Stats.svelte';
+	// import Stats from '$lib/sections/Stats.svelte';
 	import Features from '$lib/sections/Features.svelte';
 	import Screenshots from '$lib/sections/Screenshots.svelte';
 	import Installation from '$lib/sections/Installation.svelte';
@@ -28,7 +28,9 @@
 		content="{APP_NAME} te ayuda con el control de asistencias, registro de notas, reportes trimestrales/anuales y mucho más." />
 </svelte:head>
 <Home />
+<!--
 <Stats />
+-->
 <Features />
 <Screenshots />
 <Installation />
