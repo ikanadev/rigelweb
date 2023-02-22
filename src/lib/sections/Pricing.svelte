@@ -50,7 +50,7 @@
 			<div class="self-start">
 				<ul class="list-disc ml-4">
 					<li>Todo lo incluido en el plan <strong>estándar</strong></li>
-					<li>Hasta un máximo de <strong>25 cursos</strong></li>
+					<li>Hasta un máximo de <strong>20 cursos</strong></li>
 				</ul>
 			</div>
 		</div>
