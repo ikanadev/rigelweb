@@ -4,13 +4,11 @@
 </script>
 
 <SectionTitle title="Precio" id="pricing" heading="Un pago al año es suficiente" description="" />
-<section class="bg-neutral-50 dark:bg-dark pb-20">
+<section class="bg-neutral-50 dark:bg-dark">
 	<div
-		class="mx-auto max-w-2xl w-full px-4 grid gap-x-8 gap-y-4 grid-cols-1 sm:grid-cols-2 dark:text-white"
-	>
+		class="mx-auto max-w-2xl w-full px-4 grid gap-x-8 gap-y-4 grid-cols-1 sm:grid-cols-2 dark:text-white">
 		<div
-			class="flex flex-col items-center px-6 py-8 shadow-xl dark:shadow-neutral-600 rounded-lg bg-white dark:bg-neutral-800"
-		>
+			class="flex flex-col items-center px-6 py-8 shadow-xl dark:shadow-neutral-600 rounded-lg bg-white dark:bg-neutral-800">
 			<div class="text-neutral-500 mb-2">
 				<Icon class="w-12 h-12" icon="material-symbols:app-shortcut" />
 			</div>
@@ -30,8 +28,7 @@
 			</div>
 		</div>
 		<div
-			class="flex flex-col items-center px-6 py-8 shadow-xl shadow-primarylight dark:shadow-primary rounded-lg bg-primarydark text-white"
-		>
+			class="flex flex-col items-center px-6 py-8 shadow-xl shadow-primarylight dark:shadow-primary rounded-lg bg-primarydark text-white">
 			<div class="text-yellow-300 mb-2">
 				<Icon class="w-12 h-12" icon="ic:round-star" />
 			</div>
@@ -40,8 +37,7 @@
 				150 Bs.
 			</p>
 			<p
-				class="text-4xl font-bold text-green-400 dark:text-green-500 leading-3 -translate-x-3 animate-bounce ease-out"
-			>
+				class="text-4xl font-bold text-green-400 dark:text-green-500 leading-3 -translate-x-3 animate-bounce ease-out">
 				100 Bs.
 			</p>
 			<p class="text-sm font-bold my-4 italic translate-x-12 -translate-y-2 -rotate-12">

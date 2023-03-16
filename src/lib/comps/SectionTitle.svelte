@@ -10,7 +10,7 @@
 		<h2 class="text-primary dark:text-primarylight text-2xl font-semibold tracking-wide">
 			{title}
 		</h2>
-		<h3 class="text-3xl md:text-4xl font-semibold underline underline-offset-3 text-center">
+		<h3 class="text-3xl md:text-4xl font-semibold underline-offset-3 text-center">
 			{heading}
 		</h3>
 		<h4 class="text-lg md:text-xl mt-3 text-center px-2 leading-6">{description}</h4>

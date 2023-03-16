@@ -5,6 +5,7 @@
 	import Screenshots from '$lib/sections/Screenshots.svelte';
 	import Installation from '$lib/sections/Installation.svelte';
 	import Pricing from '$lib/sections/Pricing.svelte';
+	import Videos from '$lib/sections/Videos.svelte';
 	import { APP_NAME } from '$lib/constants';
 	import { page } from '$app/stores';
 </script>
@@ -35,3 +36,4 @@
 <Screenshots />
 <Installation />
 <Pricing />
+<Videos />
