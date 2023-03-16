@@ -38,8 +38,7 @@
 	id="screenshots"
 	title="Capturas de pantalla"
 	heading="Una interfaz simple y práctica"
-	description="Asistencias, calificaciones, estudiantes, materias y todo lo que necesitas a la mano. ¿Trabajando de noche?, tenemos modo nocturno."
-/>
+	description="Asistencias, calificaciones, estudiantes, materias y todo lo que necesitas a la mano. ¿Trabajando de noche?, tenemos modo nocturno." />
 <div class="bg-neutral-50 dark:bg-dark text-neutral-800 dark:text-white">
 	<section class="container mx-auto px-2">
 		<div class="blaze-slider pt-8 px-8" bind:this={sliderRef}>
@@ -47,28 +46,34 @@
 				<div class="blaze-track-container">
 					<div class="blaze-track">
 						<div class="flex justify-center">
-							<img src="/screenshots/{$theme}/login.png" alt="App login" />
+							<img src="/screenshots/{$theme}/login.png" alt="App login" loading="lazy" />
 						</div>
 						<div class="flex justify-center">
-							<img src="/screenshots/{$theme}/attendances.png" alt="Asistencias captura" />
+							<img
+								src="/screenshots/{$theme}/attendances.png"
+								alt="Asistencias captura"
+								loading="lazy" />
 						</div>
 						<div class="flex justify-center">
-							<img src="/screenshots/{$theme}/dayAtt.png" alt="Asistencias captura" />
+							<img
+								src="/screenshots/{$theme}/dayAtt.png"
+								alt="Asistencias captura"
+								loading="lazy" />
 						</div>
 						<div class="flex justify-center">
-							<img src="/screenshots/{$theme}/students.png" alt="App login" />
+							<img src="/screenshots/{$theme}/students.png" alt="App login" loading="lazy" />
 						</div>
 						<div class="flex justify-center">
-							<img src="/screenshots/{$theme}/activities.png" alt="App login" />
+							<img src="/screenshots/{$theme}/activities.png" alt="App login" loading="lazy" />
 						</div>
 						<div class="flex justify-center">
-							<img src="/screenshots/{$theme}/activity.png" alt="App login" />
+							<img src="/screenshots/{$theme}/activity.png" alt="App login" loading="lazy" />
 						</div>
 						<div class="flex justify-center">
-							<img src="/screenshots/{$theme}/subjects.png" alt="App login" />
+							<img src="/screenshots/{$theme}/subjects.png" alt="App login" loading="lazy" />
 						</div>
 						<div class="flex justify-center">
-							<img src="/screenshots/{$theme}/scores.png" alt="App login" />
+							<img src="/screenshots/{$theme}/scores.png" alt="App login" loading="lazy" />
 						</div>
 					</div>
 				</div>

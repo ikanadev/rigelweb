@@ -17,6 +17,7 @@
 		const thumbSource = `https://img.youtube.com/vi/${ytCont.dataset.embed}/sddefault.jpg`;
 		const thumbImg = new Image();
 		thumbImg.src = thumbSource;
+		thumbImg.loading = 'lazy';
 		thumbImg.addEventListener('load', () => {
 			ytCont.appendChild(thumbImg);
 		});
