@@ -61,7 +61,12 @@
 		: ''}">
 	<div class="container mx-auto flex py-3 px-2 items-center">
 		<div class="flex-1 flex items-center">
-			<img src={isTop ? '/icon_white.svg' : '/icon.svg'} alt="Logo" class="w-8 md:w-10" />
+			<img
+				src={isTop ? '/icon_white.svg' : '/icon.svg'}
+				alt="Logo"
+				class="w-8 md:w-10"
+				width="32"
+				height="32" />
 			<h1 class="font-bold text-lg">{APP_NAME}</h1>
 		</div>
 		<nav class="hidden md:flex gap-8 items-center mr-10">

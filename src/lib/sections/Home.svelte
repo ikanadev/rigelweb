@@ -23,7 +23,12 @@
 			</h3>
 		</div>
 		<div class="lg:px-20">
-			<img src="/screenshots/{$theme}/login.png" class="w-64 md:w-80" alt="App login" />
+			<img
+				src="/screenshots/{$theme}/login.png"
+				class="w-64 md:w-80"
+				alt="App login"
+				width="256"
+				height="536" />
 		</div>
 	</div>
 </section>
