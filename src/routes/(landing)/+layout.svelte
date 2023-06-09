@@ -163,6 +163,10 @@
 				<Icon icon="cib:gmail" class="w-7 h-7 mr-2 text-[#EA4335]" />
 				Contáctanos por Gmail
 			</a>
+			<a href="/term_and_conditions" class="flex items-center mt-2 hover:underline">
+				<Icon icon="fluent:notebook-32-filled" class="w-7 h-7 mr-2 text-neutral-600" />
+				T&eacute;rminos y condiciones de uso
+			</a>
 		</div>
 	</div>
 	<div class="container mx-auto px-4 mt-8">
