@@ -38,7 +38,7 @@
 <SectionTitle id="videos" title="Videos" heading="Échale un vistazo a Auleca" description="" />
 <div class="bg-neutral-50 dark:bg-dark text-neutral-800 dark:text-white pb-20">
 	<section class="container mx-auto px-2">
-		<div class="flex flex-col lg:flex-row items-center lg:items-start gap-8">
+		<div class="flex flex-col lg:flex-row gap-8">
 			<div class="px-0 lg:px-10 flex-1">
 				<div class="youtube" data-embed="jIlbrmwX49A" bind:this={ytCont}>
 					<div class="play-button" />
