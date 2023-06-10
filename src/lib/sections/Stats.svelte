@@ -2,6 +2,15 @@
 	import { onMount } from 'svelte';
 	import type { ServerData } from '$lib/types';
 
+	let data: ServerData = {
+		stats: {
+			activities: 0,
+			classes: 0,
+			schools: 0,
+			teachers: 0
+		}
+	};
+
 	const numberToLiteral = (qtty: number) => {
 		if (qtty <= 999) {
 			return `${qtty}`;
@@ -22,44 +31,43 @@
 			throw new Error('Failed to fetch stats');
 		}
 	}
-	let stats = getStats();
+
+	onMount(() => {
+		getStats().then((resp) => {
+			data = resp;
+		});
+	});
 </script>
 
 <section class="bg-neutral-50 dark:bg-dark pt-8 text-neutral-800 dark:text-white">
-	{#await stats}
-		<div>
-			<p class="italic font-semibold text-lg animate-pulse text-center">Cargando estadísticas...</p>
+	<div class="container mx-auto grid gap-y-8 grid-cols-2 md:grid-cols-4">
+		<div class="flex flex-col items-center">
+			<p class="text-sm">Presente en</p>
+			<p class="text-3xl md:text-4xl font-bold text-primary leading-8">
+				{numberToLiteral(data.stats.schools)}
+			</p>
+			<p class="text-xl md:text-2xl font-semibold">colegios</p>
 		</div>
-	{:then data}
-		<div class="container mx-auto grid gap-y-8 grid-cols-2 md:grid-cols-4">
-			<div class="flex flex-col items-center">
-				<p class="text-sm">Presente en</p>
-				<p class="text-3xl md:text-4xl font-bold text-primary leading-8">
-					{numberToLiteral(data.stats.schools)}
-				</p>
-				<p class="text-xl md:text-2xl font-semibold">colegios</p>
-			</div>
-			<div class="flex flex-col items-center">
-				<p class="text-sm">Usado por</p>
-				<p class="text-3xl md:text-4xl font-bold text-primary leading-8">
-					{numberToLiteral(data.stats.teachers)}
-				</p>
-				<p class="text-xl md:text-2xl font-semibold">profesores</p>
-			</div>
-			<div class="flex flex-col items-center">
-				<p class="text-sm">Usado en</p>
-				<p class="text-3xl md:text-4xl font-bold text-primary leading-8">
-					{numberToLiteral(data.stats.classes)}
-				</p>
-				<p class="text-xl md:text-2xl font-semibold">cursos</p>
-			</div>
-			<div class="flex flex-col items-center">
-				<p class="text-sm">Creadas</p>
-				<p class="text-3xl md:text-4xl font-bold text-primary leading-8">
-					{numberToLiteral(data.stats.activities)}
-				</p>
-				<p class="text-xl md:text-2xl font-semibold">tareas</p>
-			</div>
+		<div class="flex flex-col items-center">
+			<p class="text-sm">Usado por</p>
+			<p class="text-3xl md:text-4xl font-bold text-primary leading-8">
+				{numberToLiteral(data.stats.teachers)}
+			</p>
+			<p class="text-xl md:text-2xl font-semibold">profesores</p>
 		</div>
-	{/await}
+		<div class="flex flex-col items-center">
+			<p class="text-sm">Usado en</p>
+			<p class="text-3xl md:text-4xl font-bold text-primary leading-8">
+				{numberToLiteral(data.stats.classes)}
+			</p>
+			<p class="text-xl md:text-2xl font-semibold">cursos</p>
+		</div>
+		<div class="flex flex-col items-center">
+			<p class="text-sm">Creadas</p>
+			<p class="text-3xl md:text-4xl font-bold text-primary leading-8">
+				{numberToLiteral(data.stats.activities)}
+			</p>
+			<p class="text-xl md:text-2xl font-semibold">tareas</p>
+		</div>
+	</div>
 </section>
