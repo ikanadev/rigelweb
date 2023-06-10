@@ -117,11 +117,7 @@
 				<img src="/icon.svg" alt="Logo" class="w-12" width="48" height="48" />
 				<div>
 					<h4 class="font-semibold text-lg">{APP_NAME}</h4>
-					<p>
-						La WebApp de los profesores de <Icon
-							icon="emojione-v1:flag-for-bolivia"
-							class="inline w-6 h-6 mb-1" /> Bolivia.
-					</p>
+					<p>La WebApp de los profesores de 🇧🇴 Bolivia.</p>
 				</div>
 			</div>
 		</div>
