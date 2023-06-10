@@ -15,12 +15,22 @@
 	<div
 		class="container mx-auto relative flex flex-col md:flex-row items-center justify-center z-20 gap-4 md:gap-20 px-4">
 		<div class="md:max-w-[500px] max-w-full text-center md:text-left md:-mt-28">
-			<h2 class="text-cyan-50 font-bold text-2xl md:text-5xl">
+			<h2 class="text-white font-bold text-2xl md:text-5xl">
 				{APP_NAME} - una manera sencilla y efectiva de administrar tus clases
 			</h2>
 			<h3 class="text-cyan-50 text-xl md:text-2xl mt-2">
 				Te echamos una mano las notas, asistencias, estudiantes, tareas y mucho m&aacute;s...
 			</h3>
+			<div class="flex flex-col md:flex-row items-center md:items-start justify-between mt-2">
+				<p class="text-white text-lg md:text-xl font-semibold">Disponible en:</p>
+				<a href="https://play.google.com/store/apps/details?id=com.auleca.app.twa" class="w-48">
+					<img
+						alt="Disponible en Google Play"
+						width="192"
+						height="75"
+						src="https://play.google.com/intl/en_us/badges/static/images/badges/es-419_badge_web_generic.png" />
+				</a>
+			</div>
 		</div>
 		<div class="lg:px-20">
 			<img
