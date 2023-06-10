@@ -114,7 +114,7 @@
 	<div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-x-10 gap-y-5">
 		<div class="flex flex-col">
 			<div class="flex flex-col md:flex-row items-start md:items-center">
-				<img src="/icon.svg" alt="Logo" class="w-12" />
+				<img src="/icon.svg" alt="Logo" class="w-12" width="48" height="48" />
 				<div>
 					<h4 class="font-semibold text-lg">{APP_NAME}</h4>
 					<p>

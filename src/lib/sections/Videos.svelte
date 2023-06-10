@@ -46,8 +46,7 @@
 			</div>
 			<div class="flex-1 self-start">
 				<h3 class="text-xl text-primary font-bold mb-4">Más videos:</h3>
-				<ul
-					class="list-disc text-primary dark:text-primarylight underline pl-4 text-lg font-medium">
+				<ul class="list-disc underline pl-4 text-lg font-medium">
 					{#each videos as video}
 						<li>
 							<a href={video.url} target="_blank" rel="noreferrer">{video.label}</a>
